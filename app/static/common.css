@@ -1,13 +1,26 @@
+.logo-container {
+    display: flex;
+    gap: 10px;
+    padding: 10px;
 
-
-
-.sub_title_content {
-    display: block;
-    text-align: center;
 }
 
+.nav-logo {
+    width: 40px;
+    height: 40px;
+    padding: 5px;
+}
+
+
+.sub_title_content,
 .page_name {
-    display: block;
+    background-color: rgba(255, 255, 255, 0.7); /* Light background */
+    display: block; /* Make the background span the full width of the text */
     text-align: center;
+    padding: 5px;
+    border-radius: 5px; /* Optional: rounded corners */
+    margin: 10px auto; /* Centers the element horizontally */
+    width: max-content; /* Ensures the background only spans the text width */
 }
+
 

@@ -1,15 +1,45 @@
 {% extends 'base.html' %}
 
-{% block extra_css %}
-    <link rel="stylesheet" href="{{ url_for('about.static', filename='about.css') }}">
-{% endblock %}
-{% block extra_js %}
-    <script src="{{ url_for('about.static', filename='about.js') }}"></script>
-{% endblock %}
 
 {% block content %}
+<div class="about_page_container">
     <h1 class="page_name">{{ content.page_name }}</h1>
     <div class="sub_title_content">
         <h3>{{ content.page_subtitle }}</h3>
     </div>
+
+    <div class="main_section">
+        <div class="top_section">
+
+        </div>
+        <div class="bottom_section">
+            <ul>
+                {% for social in content.socials %}
+                <li class="social_item">
+                    <img class="social_logo" src="{{ url_for('about.static', filename='images/' + social.platform_logo) }}" alt="{{ social.platform }}">
+                    <a class="social_link" href="{{ social.platform_link }}" target="_blank">{{ social.platform_username }}</a>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script src='https://terminal.jup.ag/main-v3.js'></script>
+<script>
+    window.Jupiter.init({
+    displayMode: "widget",
+    endpoint: "https://long-greatest-crater.solana-mainnet.quiknode.pro/84855c0db92789861c7c482ef6dbd5e52b1cfbc7",
+    strictTokenList: false,
+    formProps: {
+        fixedOutputMint: true,
+        swapMode: "ExactIn",
+        initialOutputMint: "MSGYLRarqfxgoigPTE8qSDrLzu4hXsHhLzYjeX2pump",
+        platformFeeBips: 20,
+        platformFeeAccount: "HJrDpLcmMAkVKa5CRBiqqQxnmD2tRW7AE7YkNXTwwg68",
+    },
+    });
+</script>
+
 {% endblock %}
+

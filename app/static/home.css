@@ -1,0 +1,100 @@
+.home_page_container {
+    background-image: url('/static/images/main_background.jpeg');
+    background-size: cover;
+    background-position: center center;
+    min-height: 100vh; 
+    padding: 20px; 
+}
+
+
+.top_section {
+    background-image: url('/static/images/hotdog.jpeg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: auto;
+    min-height: 50vh;
+    max-height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+    .top_section {
+        width: 100%;
+        min-height: 30vh; 
+    }
+}
+
+@media (max-width: 480px) {
+    .top_section {
+        width: 100%;
+        min-height: 25vh;
+        background-size: contain;
+    }
+}
+
+.main_section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    margin: auto;
+    max-width: 1400px;
+    height: 100vh;
+    padding-bottom:50px;
+}
+
+.bottom_section {
+    border: 2px solid black;
+    background-color: rgba(255, 255, 255, 0.9);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    width: 90%;
+    max-width: 800px; 
+    margin: 20px auto;
+    border-radius: 15px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+
+.bond_bar {
+    position: relative;
+    width: 100%;
+    height: 40px;
+    background-color: #ddd; 
+    border-radius: 15px;
+    display: flex;
+    align-items: center; /* Ensures child elements align vertically */
+    justify-content: space-between; /* Keeps the bonded and remaining sections side by side */
+    overflow: hidden; /* Prevents any text or content from overflowing */
+}
+
+.fraction_bonded {
+    background-color: green; 
+    height: 100%;
+    border-radius: 15px 0 0 15px;
+}
+
+.fraction_remaining {
+    background-color: rgba(255, 255, 255, 0.3);
+    height: 100%;
+    border-radius: 0 15px 15px 0;
+}
+
+.bond_percentage_text {
+    position: absolute;
+    top: 60%; /* Moves the text down by 50% of the bond bar's height */
+    left: 50%; /* Moves it to the horizontal center */
+    transform: translate(-50%, -50%); /* Ensures perfect centering */
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    width: 100%;
+    pointer-events: none; /* Prevents interference with clicks */
+}

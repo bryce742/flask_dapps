@@ -1,39 +1,39 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <h1 class="page_name">{{ content.page_name }}</h1>
-    <div class="sub_title_content">
-        <h3>{{ content.page_subtitle }}</h3>
-    </div>
-    <div class="buy-container">
-        <div class="top-section">
-            <div class="chart-container">
-                <iframe src="https://dexscreener.com/solana/h5NciPdMZ5QCB5BYETJMYBMpVx9ZuitR6HcVjyBhood?embed=1&theme=dark&trades=0&info=0"></iframe>
-            </div>
-            <div class="widget-container">
-                <div id="integrated-terminal" style="width: 400px; height: 568px;"></div>
-                <script src='https://terminal.jup.ag/main-v3.js'></script>
-                <script>
-                    window.Jupiter.init({
-                    displayMode: "integrated",
-                    integratedTargetId: "integrated-terminal",
-                    endpoint: "https://long-greatest-crater.solana-mainnet.quiknode.pro/84855c0db92789861c7c482ef6dbd5e52b1cfbc7",
-                    strictTokenList: false,
-                    formProps: {
-                        fixedOutputMint: true,
-                        swapMode: "ExactIn",
-                        initialOutputMint: "MSGYLRarqfxgoigPTE8qSDrLzu4hXsHhLzYjeX2pump",
-                        platformFeeBips: 20,
-                        platformFeeAccount: "HJrDpLcmMAkVKa5CRBiqqQxnmD2tRW7AE7YkNXTwwg68",
-                    },
-                    });
-                </script>
-            </div>
+    <div class="buy-page-container">
+        <h1 class="page_name">{{ content.page_name }}</h1>
+        <div class="sub_title_content">
+            <h3>{{ content.page_subtitle }}</h3>
         </div>
-        <div class="blog-container">Blog Placeholder</div>
+        <div class="buy-container">
+            <div class="top-section">
+                <div class="chart-container">
+                    <iframe src="https://dexscreener.com/solana/{{ meme_ca }}?embed=1&theme=dark&trades=0&info=0"></iframe>
+                </div>
+                <div class="widget-container">
+                    <div id="integrated-terminal" style="width: 400px; height: 568px;"></div>
+                    <script src='https://terminal.jup.ag/main-v3.js'></script>
+                    <script>
+                        window.Jupiter.init({
+                        displayMode: "integrated",
+                        integratedTargetId: "integrated-terminal",
+                        endpoint: "https://long-greatest-crater.solana-mainnet.quiknode.pro/84855c0db92789861c7c482ef6dbd5e52b1cfbc7",
+                        strictTokenList: false,
+                        formProps: {
+                            fixedOutputMint: true,
+                            swapMode: "ExactIn",
+                            initialOutputMint: "MSGYLRarqfxgoigPTE8qSDrLzu4hXsHhLzYjeX2pump",
+                            platformFeeBips: 20,
+                            platformFeeAccount: "HJrDpLcmMAkVKa5CRBiqqQxnmD2tRW7AE7YkNXTwwg68",
+                        },
+                        });
+                    </script>
+                </div>
+            </div>
+            <div class="blog-container">Blog Coming Soon!</div>
+        </div>
     </div>
-
-
 {% endblock %}
 
 

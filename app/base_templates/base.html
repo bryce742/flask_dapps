@@ -5,16 +5,17 @@
             {% if title %}{{ title }}{% endif %}
         </title>
 
-        <!-- Common Styles -->
         <link rel="stylesheet" href="{{ url_for('static', filename='common.css') }}">
         <script src="{{ url_for('static', filename='common.js') }}"></script>
 
-        <!-- Blueprint-specific Styles -->
         <link rel="stylesheet" href="{{ url_for('static', filename='buy.css') }}">
         <script src="{{ url_for('static', filename='buy.js') }}"></script>
 
         <link rel="stylesheet" href="{{ url_for('static', filename='about.css') }}">
         <script src="{{ url_for('static', filename='about.js') }}"></script>
+
+        <link rel="stylesheet" href="{{ url_for('static', filename='home.css') }}">
+        <script src="{{ url_for('static', filename='home.js') }}"></script>
 
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
@@ -24,11 +25,10 @@
 
     <body>
         <header>
-            <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <nav class="navbar navbar-expand-lg" style="background-color: #e3f2fd;">
                 <div class="container-fluid">
-                    <a class="navbar-brand fw-bold fs-4" href="{{ url_for('home.home') }}">Home</a>
+                    <a class="navbar-brand fw-bold fs-4" href="{{ url_for('home.home') }}" style="padding-left: 10px;">Home</a>
                     
-                    <!-- Navbar Toggler Button -->
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
                             data-bs-target="#navbarSupportedContent" 
                             aria-controls="navbarSupportedContent" aria-expanded="false" 
@@ -46,6 +46,11 @@
                             </li>
                         </ul>
                     </div>
+                </div>
+                <div class="logo-container">
+                    <a href="https://t.me/elonsglizzy" target="_blank"><img src="{{ url_for('static', filename='images/tg_logo.png') }}" alt="TG Logo" class="nav-logo"></a>
+                    <a href="https://x.com/getelonsglizzy" target="_blank"><img src="{{ url_for('static', filename='images/Twitter-X-Logo.png') }}" alt="Twitter Logo" class="nav-logo"></a>
+                    <a href="https://dexscreener.com/solana/MSGYLRarqfxgoigPTE8qSDrLzu4hXsHhLzYjeX2pump" target="_blank"><img src="{{ url_for('static', filename='images/dex_logo.png') }}" alt="DEX Logo" class="nav-logo"></a>
                 </div>
             </nav>            
         </header>
