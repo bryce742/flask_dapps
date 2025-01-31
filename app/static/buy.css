@@ -1,0 +1,64 @@
+/* Main container holding everything */
+.buy-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    margin: auto;
+    max-width: 1400px;
+    height: 100vh; /* Full viewport height */
+}
+
+/* Flexbox layout for top section (Chart + Widget) */
+.top-section {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    gap: 20px;
+    flex-grow: 1; /* Take up remaining height */
+    align-items: stretch; /* Make both items stretch equally */
+}
+
+/* Chart should fully fill its container */
+.chart-container {
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    background: white;
+    border: 2px solid black;
+    height: 100%;
+}
+
+.chart-container iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* Widget should fully fill its container */
+.widget-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    border: 2px solid black;
+    height: 100%;
+}
+
+/* Jupiter terminal should properly fit inside the widget */
+.widget-container #integrated-terminal {
+    width: 100%;
+    height: 100%;
+}
+
+/* Placeholder blog section */
+.blog-container {
+    border: 2px solid black;
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+

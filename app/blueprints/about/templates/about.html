@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{{ url_for('about.static', filename='about.css') }}">
+{% endblock %}
+{% block extra_js %}
+    <script src="{{ url_for('about.static', filename='about.js') }}"></script>
+{% endblock %}
+
+{% block content %}
+    <h1 class="page_name">{{ content.page_name }}</h1>
+    <div class="sub_title_content">
+        <h3>{{ content.page_subtitle }}</h3>
+    </div>
+{% endblock %}
