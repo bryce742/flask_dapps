@@ -1,0 +1,64 @@
+{
+    "empty_project": {
+        "project_network": "",
+        "project_ca": "",
+        "blueprints": {
+            "home": {
+                "mc_needed_for_bond": "",
+                "": ""
+            },
+            "buy": {
+
+            },
+            "about": {
+
+            }
+        }
+    },
+
+    "Elon_pf": {
+        "project_network": "solana",
+        "project_ca": "MSGYLRarqfxgoigPTE8qSDrLzu4hXsHhLzYjeX2pump",
+        "pair_id": "22Ff6B7Hr6CJwCxSBromFtBfwva88QhwNMZqZgjwojR4",
+        "Blueprints": {
+            "home": {
+                "mc_needed_for_bond": 99209,
+                "content": {
+                    "page_title": "Home",
+                    "page_name": "Home",
+                    "page_subtitle": "Who will finish their hotdog first?",
+                    "background_image": "/static/images/main_background.jpeg",
+                    "foreground_image": "/static/images/hotdog.jpeg"
+                }
+            },
+            "buy": {
+                "content" : {
+                    "page_title": "Buy",
+                    "page_name": "Ape Elon's Glizzy!",
+                    "page_subtitle": "Think with your $GLIZZ before you ape!",
+                    "background_image": "/static/images/main_background.jpeg"
+                }
+            },
+            "about": {
+                "content": {
+                    "page_name": "Community!",
+                    "page_subtitle": "Come on, don't be shy, have a $GLIZZ!",
+                    "socials": [
+                        {
+                            "platform": "X",
+                            "platform_logo": "Twitter-X-Logo.png",
+                            "platform_username": "@getelonsglizzy",
+                            "platform_link": "https://x.com/getelonsglizzy"
+                        },
+                        {
+                            "platform": "Telegram",
+                            "platform_logo": "tg_logo.png",
+                            "platform_username": "@elonsglizzy",
+                            "platform_link": "https://t.me/elonsglizzy"
+                        }
+                    ]
+                }
+            }
+        }
+    }
+}
